@@ -1,16 +1,16 @@
 # NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis
 
-Full paper: NeRF: Representing Scenes as Neural Radiance Fields for View
+**Full paper:** NeRF: Representing Scenes as Neural Radiance Fields for View
 Synthesis
 
-Authors: Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan
+**Authors:** Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan
 T. Barron, Ravi Ramamoorthi, Ren Ng
 
-Published: European Conference on Computer Vision (ECCV), 2020
+**Published:** European Conference on Computer Vision (ECCV), 2020
 
-Project page: <https://www.matthewtancik.com/nerf>
+**Project page:** <https://www.matthewtancik.com/nerf>
 
-Link: <https://arxiv.org/abs/2003.08934>
+**Link:** <https://arxiv.org/abs/2003.08934>
 
 ## Base Idea / ABSTRACT
 
