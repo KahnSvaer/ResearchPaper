@@ -1,7 +1,5 @@
 # 3D Gaussian Splatting for Real-Time Radiance Field Rendering
 
-## Paper Details
-
 **Full paper:** 3D Gaussian Splatting for Real-Time Radiance Field Rendering
 
 **Authors:** Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis
