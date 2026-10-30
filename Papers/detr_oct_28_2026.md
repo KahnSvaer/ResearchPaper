@@ -34,23 +34,11 @@ The final prediction is computed by a 3-layer perceptron with ReLU activation fu
 
 The results that we obtain from the DETR model are in the form of unordered sets. Thus, before comparing the results, we need to match elements and class labels to the ground truth. This is done by finding the minimum loss using Hungarian matching. Each element of the ground-truth label can be represented as $(c_i, b_i)$, where $c_i$ is the target class label (which may be $\varnothing$), and $b_i \in [0, 1]^4$ is a vector that defines the ground-truth box's center coordinates, height, and width relative to the image size.
 
-$$
-\mathcal{L}_{\text{match}}(y_i,\hat{y}_{\sigma(i)})
-=
--\mathbb{1}_{c_i \neq \varnothing}\hat{p}_{\sigma(i)}(c_i)
-+
-\mathbb{1}_{c_i \neq \varnothing}\mathcal{L}_{\text{box}}(b_i,\hat{b}_{\sigma(i)})
-$$
+$$ \mathcal{L}_{\text{match}}(y_i,\hat{y}_{\sigma(i)}) = -\mathbb{1}_{c_i \neq \varnothing}\hat{p}_{\sigma(i)}(c_i) + \mathbb{1}_{c_i \neq \varnothing}\mathcal{L}_{\text{box}}(b_i,\hat{b}_{\sigma(i)}) $$
 
 The Lbox is found via:
 
-$$
-\mathcal{L}_{\text{box}}(b_i,\hat{b}_{\sigma(i)})
-=
-\lambda_{\mathrm{iou}}\mathcal{L}_{\mathrm{iou}}(b_i,\hat{b}_{\sigma(i)})
-+
-\lambda_{L_1}\|b_i-\hat{b}_{\sigma(i)}\|_1
-$$
+$$\mathcal{L}_{\text{box}}(b_i,\hat{b}_{\sigma(i)})=\lambda_{\mathrm{iou}}\mathcal{L}_{\mathrm{iou}}(b_i,\hat{b}_{\sigma(i)})+\lambda_{L_1}\|b_i-\hat{b}_{\sigma(i)}\|_1$$
 
 $$
 \text{where } \lambda_{\mathrm{iou}}, \lambda_{L_1} \in \mathbb{R} \text{ are hyperparameters.}

@@ -14,7 +14,7 @@
 
 This is an improvement over the DETR paper. I am reading this as a foundation of getting into world models (one of the foundation paper in reading list). This basically solves 2 problems faced by the DETR model.
 
-1. DETR model seemed to be struggle with small objects
+1. DETR model seemed to be struggle with small objects.
 2. DETR model seemed to take a lot of time to converge with a lot of final attention maps being extremely sparse near the end of training.
 
 ## Intuitive understanding:
@@ -39,15 +39,7 @@ For solving this problem the paper takes inspiration from deformable convolution
 
 ### 1. Deformable Attention
 
-$$
-\operatorname{DeformAttn}(z_q,p_q,x)
-=
-\sum_{m=1}^{M} W_m
-\left[
-\sum_{k=1}^{K}
-A_{mqk}\, W'_m x\left(p_q+\Delta p_{mqk}\right)
-\right]
-$$
+$$\mathrm{DeformAttn}(z_q,p_q,x)=\sum_{m=1}^{M}W_m\left[\sum_{k=1}^{K}A_{mqk}\,W'_m x\left(p_q+\Delta p_{mqk}\right)\right]$$
 
 **Where:**
 
@@ -68,7 +60,7 @@ $$
 - $W'_m \in \mathbb{R}^{d_h \times C}$: Per-head value projection matrix.
 - $W_m \in \mathbb{R}^{C \times d_h}$: Per-head output projection matrix.
 - $d_h=C/M$: Feature dimension per head.
-- $\operatorname{DeformAttn}(\cdot) \in \mathbb{R}^{C}$: Final output feature.
+- $\mathrm{DeformAttn}(\cdot) \in \mathbb{R}^{C}$: Final output feature.
 
 For head $m$ and sampling point $k$, $W'_m x\left(p_q+\Delta p_{mqk}\right)$ is the equivalent projected value vector. Since only $K$ sampling points are used per head ($K \ll HW$), the computation processes far fewer values.
 
