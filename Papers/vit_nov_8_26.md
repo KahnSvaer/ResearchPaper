@@ -2,7 +2,7 @@
 
 **Full paper:** An Image is Worth 16×16 Words: Transformers for Image Recognition at Scale
 
-**Authors:** Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, et al.
+Authors: Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, Neil Houlsby.
 
 **Published:** ICLR 2021
 
